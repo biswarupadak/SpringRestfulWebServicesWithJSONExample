@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'centos-wildfly'
-    }
-    
-  }
+  agent none
   stages {
     stage('Build Application') {
       steps {

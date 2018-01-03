@@ -11,5 +11,11 @@ pipeline {
         build 'centos-docker-wildfly-job'
       }
     }
+    stage('Push Docker Imgage') {
+      steps {
+        sh '''sudo docker login -u adakb -p 1234@Qwer
+sodu docker push adakb/centos-wildfy'''
+      }
+    }
   }
 }

@@ -49,6 +49,14 @@
 					<target>${jdk.version}</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+				  <webappDirectory>/var/lib/jenkins/workspace/centos-docker-wildfly-job/</webappDirectory>
+				</configuration>
+			      </plugin>
 		</plugins>
 
 	</build>

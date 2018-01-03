@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Push Docker Imgage') {
       steps {
-        build 'centos-wildfly-image-pushadakb/centos-wildfy'
+        build 'centos-wildfly-image-push'
       }
     }
   }

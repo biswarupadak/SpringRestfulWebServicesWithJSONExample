@@ -13,8 +13,7 @@ pipeline {
     }
     stage('Push Docker Imgage') {
       steps {
-        sh '''sudo docker login -u adakb -p 1234@Qwer
-sodu docker push adakb/centos-wildfy'''
+        build 'centos-wildfly-image-pushadakb/centos-wildfy'
       }
     }
   }

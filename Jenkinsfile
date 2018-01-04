@@ -11,7 +11,7 @@ pipeline {
         build 'centos-docker-wildfly-job'
       }
     }
-    stage('Push Docker Imgage') {
+    stage('Push Docker Image') {
       steps {
         build 'centos-wildfly-image-push'
       }

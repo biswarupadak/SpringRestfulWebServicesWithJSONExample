@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build Application') {
       steps {
-        build(job: 'maven_build_spring_example', quietPeriod: 5, propagate: true, wait: true)
+        build(job: 'maven_build_spring_restfulwebservices_with_json', quietPeriod: 5, propagate: true, wait: true)
       }
     }
     stage('Docker Image Build') {
@@ -14,6 +14,11 @@ pipeline {
     stage('Push Docker Imgage') {
       steps {
         build 'centos-wildfly-image-push'
+      }
+    }
+    stage('Deploy to GCP k8s Dev Cluster') {
+      steps {
+        build 'gcp-kubernetes-deployment'
       }
     }
   }
